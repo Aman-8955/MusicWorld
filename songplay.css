@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+  }
+  .nav {
+    width: 100%;
+    height: fit-content;
+    padding: 10px 0;
+    background-color: rgb(49, 45, 45);
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Pacifico", cursive;
+  }
+  body {
+    background: #161623;
+  }
+  body::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#f00,#f0f);
+    clip-path: circle(30% at right 70%);
+  }
+  body::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#2196f3,#e91e63);
+    clip-path: circle(20% at 10% 10%);
+    z-index: -1;
+  }
+  .blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(2px);
+  }
+  /* spinner */
+.cp-spinner {
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    box-sizing: border-box;
+    position: relative;
+  }
+  
+  .cp-round:before {
+    border-radius: 50%;
+    content: " ";
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    box-sizing: border-box;
+    border-top: solid 6px #bababa;
+    border-right: solid 6px #bababa;
+    border-bottom: solid 6px #bababa;
+    border-left: solid 6px #bababa;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .cp-round:after {
+    border-radius: 50%;
+    content: " ";
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    box-sizing: border-box;
+    border-top: solid 6px #f56151;
+    border-right: solid 6px transparent;
+    border-bottom: solid 6px transparent;
+    border-left: solid 6px transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: cp-round-animate 1s ease-in-out infinite;
+  }
+  
+  @keyframes cp-round-animate {
+    0% {
+        transform: rotate(0);
+    }
+  
+    100% {
+        transform: rotate(360deg);
+    }
+  }
+  /* Ended */
+  #bluronload{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    backdrop-filter: blur(6px);
+  }
+  #spinner{
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    outline: 1px solid black;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+  }
+  #backbox{
+      float: left;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      margin: 10px;
+      background-color: black;
+      color: white;
+      border-radius: 15px;
+      outline: 2px solid white;
+      padding: 5px 20px;
+  }
+  #backbox:hover{
+    background-color: white;
+    color: black;
+    outline-color:black;
+  }
+  #backtext{
+    font-size: 1.3rem;
+    margin-left: 8px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+  }
+  #card{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      border-top: 2px solid white;
+      border-left: 2px solid white;
+      padding: 30px;
+      background-color:rgba(250, 250, 250, 0.322);
+      box-shadow: 2px 2px 10px black;
+      backdrop-filter: blur(10px);
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: fit-content;
+  }
+  #title{
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    color: white;
+    margin-top: 10px;
+  }
+  #controls{
+    display: flex;
+  }
+  #download{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 5px 5px 0 0;
+    cursor: pointer;
+  }
+  #previous{
+    cursor: pointer;
+  }
+  #play{
+    cursor: pointer;
+  }
+  #next{
+    cursor: pointer;
+  }
+  #img{
+    outline: 1px solid white;
+  }
+
